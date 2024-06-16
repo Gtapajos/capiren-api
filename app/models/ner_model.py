@@ -6,8 +6,6 @@ import os
 
 api_key = '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'
 
-login(token='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', add_to_git_credential=False)
-
 class NerModel():
     def __init__(self):
         self.__tokenizer = ""
