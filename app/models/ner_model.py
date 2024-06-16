@@ -9,7 +9,7 @@ load_dotenv()
 
 api_key = os.getenv('HUGGINGFACEHUB_API_TOKEN')
 
-login(token=api_key, add_to_git_credential=True)
+login(token=api_key)
 
 class NerModel():
     def __init__(self):
