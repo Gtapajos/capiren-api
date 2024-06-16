@@ -4,6 +4,10 @@ from app.models.ner_model import NerModel
 
 ner_app = Blueprint('ner_routes', __name__)
 
+@ner_app.route('/', methods=['GET'])
+def hello_world():
+    return jsonify({'message': 'Hello World!'})
+
 @ner_app.route('/labels', methods=['GET'])
 def get_labels():
     text = request.json['text']
