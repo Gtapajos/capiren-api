@@ -1,6 +1,15 @@
 from transformers import AutoTokenizer
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline
+from huggingface_hub import login
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+api_key = os.getenv('HUGGINGFACEHUB_API_TOKEN')
+
+login(token=api_key, add_to_git_credential=True)
 
 class NerModel():
     def __init__(self):
